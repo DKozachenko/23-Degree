@@ -1,0 +1,40 @@
+.nav
+  display: none
+  position: absolute
+  top: 6rem
+  right: 0
+  z-index: 1
+
+  padding: 1rem
+  border-radius: .5rem
+
+  background: darken($blue, 20%)
+
+  &.nav_show
+    display: block
+
+  &__link 
+    font-family: 'Roboto', sans-serif
+    font-size: 1.6rem
+    color: white
+    text-decoration: none
+
+    padding-left: 10rem
+    padding-right: 0.5rem
+
+    margin-bottom: .7rem
+
+    transition: all .2s linear
+
+    &:hover 
+      background: white
+      color: $blue
+      text-decoration: none
+
+    &:last-child
+      margin-bottom: 0
+
+@media (max-width: 768px) 
+  .nav__link
+    padding-left: 6rem
+        
