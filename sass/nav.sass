@@ -11,7 +11,7 @@
   background: darken($blue, 20%)
 
   &.nav_show
-    display: block
+    display: flex
 
   &__link 
     font-family: 'Roboto', sans-serif
@@ -22,8 +22,6 @@
     padding-left: 10rem
     padding-right: 0.5rem
 
-    margin-bottom: .7rem
-
     transition: all .2s linear
 
     &:hover 
@@ -31,10 +29,19 @@
       color: $blue
       text-decoration: none
 
-    &:last-child
-      margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: .7rem
+
+@media (max-width: 1200px) 
+  .nav__link
+    padding-left: 7rem   
+
 
 @media (max-width: 768px) 
   .nav__link
     padding-left: 6rem
+
+@media (max-width: 370px) 
+  .nav__link
+    padding-left: 3rem    
         

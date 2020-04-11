@@ -1,0 +1,190 @@
+.home 
+  background-image: url(../css/images/home/bg-2.png), url(../css/images/home/bg.jpg)  
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  height: 100vh
+  position: relative
+
+  color: white
+
+  .container,
+  .row,
+  .col-12,
+    height: 100%
+    
+  &__inner
+    height: 100%
+
+    &-title 
+      font-size: 4.8rem
+      font-weight: 700
+      line-height: 4.4rem
+
+      width: 100%
+      max-width: 69.5rem
+
+      margin-bottom: 4.5rem
+
+    &-text 
+      font-size: 2.2rem
+      font-weight: 300
+      line-height: 2.8rem
+
+      margin-bottom: 4.5rem
+
+    &-form 
+      width: 100%
+      margin-bottom: 2rem
+
+      position: relative
+
+      input 
+        padding: 1.8rem 2.5rem
+
+        width: 100%
+        max-width: 29rem
+
+        border: none  
+        border-radius: 3rem
+
+        font-size: 1.3rem
+        font-weight: 300
+        line-height: 2.4rem
+        color: $black
+
+        &:not(:last-child)
+          margin-right: 1rem
+
+        &:focus
+          color: darken($blue, 40%) 
+
+      &__frame
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translateX(-50%) 
+        z-index: 1    
+
+
+
+    &-caption
+      font-size: 1.4rem
+      font-weight: 300
+      line-height: 2.8rem    
+
+  &__mouse 
+    position: absolute
+    left: 50%
+    bottom: -2rem
+    transform: translateX(-50%) 
+    z-index: 1 
+
+    &:hover 
+      cursor: pointer    
+          
+@media (max-width: 992px)
+  .home__inner-title 
+    font-size: 4rem
+    max-width: 52.5rem
+
+  .home__inner-form__frame
+    display: none  
+
+  .home
+    .button
+      margin-bottom: 1rem  
+    
+@media (max-width: 768px)
+  .home__inner-title
+    font-size: 3rem
+    line-height: 3.5rem
+    max-width: 30rem
+
+    margin-bottom: 2rem
+
+  .home__inner-text
+    font-size: 2rem
+    line-height: 2rem
+
+    width: 100%
+    max-width: 35rem
+
+    margin-bottom: 2rem
+
+  .home__inner-form
+    margin-bottom: 0
+
+    input
+      &:not(:last-child)
+        margin-right: 0
+        margin-bottom: 1.5rem
+
+  .home__mouse 
+    bottom: 0      
+        
+@media (max-width: 576px)
+  .home__inner-title
+    font-size: 2rem
+    line-height: 2.5rem
+    max-width: 30rem
+
+    margin-top: 7rem
+
+  .home__inner-text
+    font-size: 1.5rem
+    line-height: 1.7rem
+
+    max-width: 26rem
+
+    margin-bottom: 2rem
+
+  .home
+    .button
+      margin-left: 3rem             
+
+@media (max-width: 450px)
+  .home__inner-title
+    margin-top: 9rem
+
+    max-width: 23rem
+
+    text-align: left !important
+
+  .home__inner-text 
+    max-width: 23rem
+
+    text-align: left !important     
+
+  .home__inner-form
+    input
+      max-width: 22rem
+      padding: 1rem
+
+  .home
+    .button
+      margin-left: 0   
+
+@media (max-width: 370px)
+  .home__inner-title
+    font-size: 1.7rem 
+    line-height: 2rem 
+    
+    max-width: 16rem
+    margin-top: 13rem
+
+  .home__inner-text 
+    font-size: 1.2rem 
+    line-height: 1.5rem 
+    
+    max-width: 16rem    
+
+  .home__inner-form
+    input
+      max-width: 18rem
+      padding: 1rem
+
+  .home__mouse 
+    bottom: -2rem    
+         

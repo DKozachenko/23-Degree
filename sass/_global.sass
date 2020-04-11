@@ -6,6 +6,10 @@ body
   background: white
   margin: 0
 
+*,
+*::after,
+*::before 
+  outline: none
 
 section 
   padding: 6rem 0 7rem 0
@@ -44,8 +48,20 @@ section
 
   border: none
   border-radius: 3rem
+
+  margin-bottom: 2.5rem
  
   width: 100%
   max-width: 23.5rem
 
-    
+  transition: background-color .2s linear, 
+
+  &:focus 
+    outline: none
+
+  &:hover
+    background: darken($blue, 20%)   
+
+@media (max-width: 768px)
+  section 
+    padding: 3rem 0    
