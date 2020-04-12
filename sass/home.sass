@@ -4,7 +4,7 @@
   background-repeat: no-repeat
   background-size: cover
 
-  height: 100vh
+  height: 70rem
   position: relative
 
   color: white
@@ -62,6 +62,7 @@
 
       &__frame
         position: absolute
+        width: 100%
         left: 50%
         top: 50%
         transform: translateX(-50%) 
@@ -82,7 +83,10 @@
     z-index: 1 
 
     &:hover 
-      cursor: pointer    
+      cursor: pointer  
+
+    img 
+      width: 100%    
           
 @media (max-width: 992px)
   .home__inner-title 
@@ -114,7 +118,7 @@
     margin-bottom: 2rem
 
   .home__inner-form
-    margin-bottom: 0
+    margin-bottom: 0  
 
     input
       &:not(:last-child)
@@ -130,7 +134,7 @@
     line-height: 2.5rem
     max-width: 30rem
 
-    margin-top: 7rem
+    margin-top: 9rem
 
   .home__inner-text
     font-size: 1.5rem
@@ -146,16 +150,13 @@
 
 @media (max-width: 450px)
   .home__inner-title
-    margin-top: 9rem
-
     max-width: 23rem
-
-    text-align: left !important
 
   .home__inner-text 
-    max-width: 23rem
+    max-width: 23rem    
 
-    text-align: left !important     
+  .home__inner-caption 
+    line-height: 2rem   
 
   .home__inner-form
     input
@@ -178,7 +179,7 @@
     font-size: 1.2rem 
     line-height: 1.5rem 
     
-    max-width: 16rem    
+    max-width: 16rem     
 
   .home__inner-form
     input
