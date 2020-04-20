@@ -1,0 +1,75 @@
+.advantages
+  background: #f5f9fa
+  color: $black
+
+  .title
+    &::after 
+      max-width: 150%
+
+  &__item
+    margin-bottom: 5rem
+
+    &-img
+      margin-bottom: 4rem
+
+      position: relative 
+
+      width: 100%
+      max-width: 12.5rem
+
+      background-image: url(../css/images/advantages/circle.png)
+      background-repeat: no-repeat
+      
+      &::after
+        content: ''
+        position: absolute 
+        bottom: -1.5rem
+        left: 50%
+        z-index: 1
+        transform: translateX(-50%)
+
+        display: block
+        width: 12.5rem
+        height: 1px
+        background: $blue
+
+      &.advantages__item-img_1
+        background-position: 6.5rem 0  
+
+      &.advantages__item-img_2
+        background-position: 1.5rem 3rem  
+
+      &.advantages__item-img_3
+        background-position: 5.7rem 2rem   
+
+      &.advantages__item-img_4
+        background-position: 2rem 1.2rem  
+
+      &.advantages__item-img_5
+        background-position: 2.5rem 0 
+
+      &.advantages__item-img_6
+        background-position: 2.5rem 2.8rem      
+
+    &-text 
+      font-size: 1.4rem
+      font-weight: 500
+      line-height: 2rem    
+
+@media (max-width: 576px)
+  .advantages__item
+    padding: 0 8rem  
+
+@media (max-width: 450px)
+  .advantages
+    .title
+      &::after 
+        max-width: 105%
+
+    &__item  
+      padding: 0 3rem 
+    
+
+@media (max-width: 380px)
+  .advantages__item
+    padding: 0          

@@ -1,0 +1,108 @@
+.tabs
+  margin-bottom: 2rem
+
+  &__item
+    border: 1px solid $blue
+    background: transparent
+
+    font-size: 1.4rem
+    font-weight: 300
+    line-height: 3.8rem
+    text-transform: uppercase
+    color: $blue
+
+    padding: 1rem 3rem
+    outline: none
+
+    transition: all .2s linear
+
+    &:not(:first-child)
+      margin-left: -0.4rem
+
+    &:first-child
+      border-top-left-radius: 3rem
+      border-bottom-left-radius: 3rem
+
+    &:last-child
+      border-top-right-radius: 3rem
+      border-bottom-right-radius: 3rem    
+
+    &:hover 
+      cursor: pointer  
+
+    &.tabs__item_active
+      background: $blue
+      color: white  
+
+      transform: scale(1.2)
+      border-radius: 2rem
+
+      outline: none
+
+.works__img 
+  margin-bottom: 2rem 
+
+@media (max-width: 992px)
+  .tabs__item
+    font-size: 1.2rem
+    line-height: 2rem   
+
+@media (max-width: 768px)
+  .tabs__item
+    padding: 1rem 2rem
+
+    &:nth-child(2)
+      margin-bottom: 1rem
+
+    &:nth-child(3)
+      border-top-right-radius: 3rem
+      border-bottom-right-radius: 3rem 
+        
+    &:last-child
+      border-radius: 2rem 
+
+    &.tabs__item_active
+      background: $blue
+      color: white  
+
+      transform: scale(1.2)
+      border-radius: 2rem
+
+      outline: none   
+
+@media (max-width: 423px)
+  .tabs__item
+    &:nth-child(2)
+      border-top-right-radius: 3rem
+      border-bottom-right-radius: 3rem 
+
+    &:nth-child(3)
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0 
+      border-top-left-radius: 3rem
+      border-bottom-left-radius: 3rem 
+
+    &:last-child
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0  
+
+    &.tabs__item_active
+      background: $blue
+      color: white  
+
+      transform: scale(1.2)
+      border-radius: 2rem
+
+      outline: none   
+          
+@media (max-width: 392px)
+  .tabs__item
+    &:nth-child(3)
+      border-radius: 3rem 
+
+      margin-bottom: 1rem
+
+    &:last-child
+      border-radius: 3rem  
+
+      

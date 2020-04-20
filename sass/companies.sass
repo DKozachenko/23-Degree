@@ -1,0 +1,120 @@
+.companies 
+  background: #f5f9fa
+
+  .title
+    &::after
+      max-width: 60%
+
+.range__slider
+  position: relative
+  height: 10.7rem
+
+  margin-bottom: 3rem
+
+  overflow-x: hidden
+
+  &-list
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+
+    &__item
+      &:not(:last-child)
+        margin-right: 2rem
+
+//Styles for range  
+
+input[type=range] 
+  -webkit-appearance: none
+  width: 100%
+  background: #e3e7e8
+  height: 0.5rem
+  border-radius: 1rem
+
+  &:focus
+    outline: none
+
+
+input[type=range]::-webkit-slider-thumb 
+  -webkit-appearance: none
+
+
+input[type=range]::-ms-track 
+  width: 100%
+  cursor: pointer
+
+  background: transparent 
+  border-color: transparent
+  color: transparent
+  
+
+input[type=range]::-webkit-slider-thumb 
+  -webkit-appearance: none
+  height: 1.1rem
+  width: 3.2rem
+  cursor: pointer
+
+  background: url(../css/images/companies/range.png)
+
+input[type=range]::-moz-range-thumb 
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+  border: 1px solid #000000
+  height: 36px
+  width: 16px
+  border-radius: 3px
+  background: #ffffff
+  cursor: pointer
+
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb 
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+  border: 1px solid #000000
+  height: 36px
+  width: 16px
+  border-radius: 3px
+  background: #ffffff
+  cursor: pointer
+ 
+@media (max-width: 1200px) 
+  .range__slider
+    margin-bottom: 1rem
+
+    &-list__item
+      max-width: 11.5rem
+      
+      img
+        max-width: 12.5rem
+
+ 
+@media (max-width: 992px) 
+  .range__slider
+    margin-bottom: 0
+
+    &-list__item
+      max-width: 9rem
+      
+      img
+        max-width: 8rem        
+
+@media (max-width: 768px) 
+  .range__slider 
+    height: auto
+
+    &-list__item
+      max-width: 100%
+
+      &:not(:last-child)
+        margin-right: 0
+        margin-bottom: 1.5rem
+
+      img 
+        max-width: 100%
+
+    &-list
+      position: static
+
+
+  input[type = "range"]
+    display: none       

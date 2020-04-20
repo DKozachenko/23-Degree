@@ -1,0 +1,70 @@
+.footer
+  background: $footer-black
+  color: white
+
+  .container
+    .row
+      &:first-child
+        padding: 3.5rem 0 5.5rem 0
+        border-bottom: 1px solid #50504c
+
+      &:last-child
+        padding: 2rem 0 3rem 0  
+
+  &__links 
+    &-box 
+      &__item 
+        font-size: 1.4rem
+        font-weight: 300
+        line-height: 2.4rem
+        color: white
+
+        text-decoration: none
+
+        &:hover 
+          color: white
+
+  &__social 
+    &-text
+      font-size: 1.4rem
+      font-weight: 300
+
+      margin-bottom: 0.7rem
+
+    &-icons
+      img 
+        width: 3rem
+        padding: 0.5rem
+        border: 1px solid white
+        border-radius: .4rem
+
+        &:not(:last-child)
+          margin-right: 0.5rem
+
+        &:hover 
+          cursor: pointer  
+
+  &__copy,
+    font-size: 1.4rem
+    font-weight: 300
+    line-height: 2.4rem      
+
+  &__maker
+    p
+      font-size: 1.4rem
+      font-weight: 300
+      line-height: 2.4rem 
+
+      margin-right: 1rem     
+
+@media (max-width: 768px) 
+  .footer
+    .container
+      .row
+        &:first-child
+          padding-bottom: 2rem 
+
+  .footer__links 
+    margin-bottom: 2em     
+
+
