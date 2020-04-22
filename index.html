@@ -9,7 +9,26 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -90,7 +109,7 @@
             <div class="home__inner-caption text-center">*Мы гарантируем конфидициальность передаваемых данных</div>
           </div>
 
-          <div class="home__mouse">
+          <div class="home__mouse wow pulse" data-wow-iteration="infinite" id="mouseDown">
             <img class="img-fluid" src="css/images/home/mouse.png" alt="mouse">
           </div>
         </div>
@@ -108,7 +127,7 @@
 
       <div class="row">
         <div class="col-md-6 col-12">
-          <div class="services__content d-flex flex-column justify-content-center">
+          <div class="services__content d-flex flex-column justify-content-center wow slideInLeft">
             <h3 class="services__content-title">Дизайн интерьера</h3>
 
             <div class="services__content-text">Услуга, направленная на разработку интерьеров помещений с целью обеспечить удобство и эстетически приятное ощущение у человека при нахождении в помещении</div>
@@ -118,7 +137,7 @@
         </div>
 
         <div class="col-md-6 col-12">
-          <div class="services__img">
+          <div class="services__img wow slideInRight">
             <img class="img-fluid" src="css/images/services/1.jpg" alt="interier">
           </div>
         </div>
@@ -126,13 +145,13 @@
 
       <div class="row">
         <div class="col-md-6 col-12">
-          <div class="services__img">
+          <div class="services__img wow slideInLeft">
             <img class="img-fluid" src="css/images/services/2.jpg" alt="exterier">
           </div>
         </div>
 
         <div class="col-md-6 col-12">
-          <div class="services__content d-flex flex-column justify-content-center">
+          <div class="services__content d-flex flex-column justify-content-center wow slideInRight">
             <h3 class="services__content-title">Дизайн экстерьера</h3>
 
             <div class="services__content-text">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий, позволяющая обеспечить удобство людей при нахождении на территории</div>
@@ -144,7 +163,7 @@
 
       <div class="row">
         <div class="col-md-6 col-12">
-          <div class="services__content d-flex flex-column justify-content-center">
+          <div class="services__content d-flex flex-column justify-content-center wow slideInLeft">
             <h3 class="services__content-title">Визуализация</h3>
 
             <div class="services__content-text">Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий позволяющая обеспечить удобство людей при нахождении на территории</div>
@@ -154,7 +173,7 @@
         </div>
 
         <div class="col-md-6 col-12">
-          <div class="services__img">
+          <div class="services__img wow slideInRight">
             <img class="img-fluid" src="css/images/services/3.jpg" alt="visuality">
           </div>
         </div>
@@ -178,12 +197,12 @@
             <div class="calculator__content-area d-flex flex-column">
               <h3 class="calculator__content-area__title">Площадь помещения:</h3>
 
-              <div class="calculator__content-area__points d-flex">
+              <div class="calculator__content-area__points d-flex" id="areaPoints">
                 <div class="calculator__content-area__point point_1 d-flex align-items-center">
                   <p>100м<sup>2</sup></p>
 
                   
-                  <input id="input1" type="radio" name="sum">
+                  <input checked id="input1" type="radio" name="sum">
 
                   <label for="input1"></label>
                 </div>
@@ -220,7 +239,7 @@
             <div class="calculator__content-pack">
               <h3 class="calculator__content-pack__title">Выберите пакет:</h3>
               
-              <div class="calculator__content-pack__points flex-md-nowrap d-flex justify-content-between flex-wrap">
+              <div class="calculator__content-pack__points flex-md-nowrap d-flex justify-content-between flex-wrap" id="packPoints">
                 <div class="calculator__content-pack__point pack__point justify-content-md-center d-flex justify-content-start align-items-center">
                   <button class="button button_calсulator" data-koef="45 000">Light</button>
 
@@ -254,17 +273,17 @@
           <div class="calculator__results d-flex flex-lg-column align-items-lg-center flex-lg-nowrap flex-wrap">
             <div class="calculator__results-area text-center">
               Площадь помещения:
-              <span id="area">1000м<sup>2</sup></span>
+              <span id="area">100м<sup>2</sup></span>
             </div>
 
             <div class="calculator__results-meters text-center">
               Средняя стоимость м<sup>2</sup>:
-              <span id="meters">4850тг</span>
+              <span id="meters">4.5тг</span>
             </div>
 
             <div class="calculator__results-object text-center">
               Средняя стоимость объекта:
-              <span id="object">48 500тг</span>
+              <span id="object">45 000тг</span>
             </div>
 
             <button class="button button_results">Получить консультацию специалиста</button>
@@ -285,7 +304,7 @@
         <div class="col-12 text-center">
           <h3 class="title">Портфолио</h3>
 
-          <div class="tabs" id="tabs">
+          <div class="tabs" id="lineTab">
             <button class="tabs__item tabs__item_active" data-tab="all">Все проекты</button>
           
             <button class="tabs__item" data-tab="Ex">Экстерьеры</button>
@@ -299,37 +318,37 @@
 
       <div class="row">
         <div class="col-lg-4 col-md-6 col-12" data-img="Ex">
-          <div class="works__img d-md-block d-flex justify-content-center">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn">
             <img class="img-fluid" src="css/images/works/1.jpg" alt="work1">
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-12" data-img="Live">
-          <div class="works__img d-md-block d-flex justify-content-center">
+        <div class="col-lg-4 col-md-6 col-12" data-img="Live" data-wow-delay=".1s">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn">
             <img class="img-fluid" src="css/images/works/2.jpg" alt="work2">
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-12" data-img="Pub">
-          <div class="works__img d-md-block d-flex justify-content-center">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn" data-wow-delay=".2s">
             <img class="img-fluid" src="css/images/works/3.jpg" alt="work3">
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-12" data-img="Ex">
-          <div class="works__img d-md-block d-flex justify-content-center">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn" data-wow-delay=".3s">
             <img class="img-fluid" src="css/images/works/4.jpg" alt="work4">
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-12" data-img="Live">
-          <div class="works__img d-md-block d-flex justify-content-center">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn" data-wow-delay=".4s">
             <img class="img-fluid" src="css/images/works/5.jpg" alt="work5">
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 col-12" data-img="Pub">
-          <div class="works__img d-md-block d-flex justify-content-center">
+          <div class="works__img d-md-block d-flex justify-content-center wow zoomIn" data-wow-delay=".5s">
             <img class="img-fluid" src="css/images/works/6.jpg" alt="work6">
           </div>
         </div>
@@ -349,7 +368,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_1 d-flex justify-content-center">
-              <img src="css/images/advantages/1.png" alt="">
+              <img src="css/images/advantages/1.png" alt="advantage1">
             </div>
 
             <div class="advantages__item-text text-center">Профессиональные дизайнеры и визуализаторы с зарубежной практикой работы</div>
@@ -359,7 +378,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_2 d-flex justify-content-center">
-              <img src="css/images/advantages/2.png" alt="">
+              <img src="css/images/advantages/2.png" alt="advantage2">
             </div>
             
             <div class="advantages__item-text text-center">Интеративный подход, работаем до полного согласования с Вами</div>
@@ -369,7 +388,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_3 d-flex justify-content-center">
-              <img src="css/images/advantages/3.png" alt="">
+              <img src="css/images/advantages/3.png" alt="advantage3">
             </div>
 
             <div class="advantages__item-text text-center">Решаем вопрос закупки, берем авторский надзор на себя (пакет Full)</div>
@@ -379,7 +398,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_4 d-flex justify-content-center">
-              <img src="css/images/advantages/4.png" alt="">
+              <img src="css/images/advantages/4.png" alt="advantage4">
             </div>
 
             <div class="advantages__item-text text-center">Над проектом работает группа специалистов под началом project менеджера в ERP системе</div>
@@ -389,7 +408,7 @@
         <div class="col-lg-3 offset-lg-3 col-md-4 offset-md-0 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_5 d-flex justify-content-center">
-              <img src="css/images/advantages/5.png" alt="">
+              <img src="css/images/advantages/5.png" alt="advantage5">
             </div>
 
             <div class="advantages__item-text text-center">Выполнение раньше установленных сроков</div>
@@ -399,7 +418,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-12">
           <div class="advantages__item d-flex flex-column justify-content-center align-items-center">
             <div class="advantages__item-img advantages__item-img_6 d-flex justify-content-center">
-              <img src="css/images/advantages/6.png" alt="">
+              <img src="css/images/advantages/6.png" alt="advantage6">
             </div>
 
             <div class="advantages__item-text text-center">Дарим альбом проекта, вместе с 25% скидкой на следующее обращение</div>
@@ -417,7 +436,7 @@
         </div>
       </div>
 
-      <div class="row no-gutters">
+      <div class="row no-gutters wow flipInX">
         <div class="col-md-6 col-12">
           <div class="process__content d-flex justify-content-center align-items-center">
             <div class="process__content-text">Заполнение брифа</div>
@@ -426,15 +445,15 @@
 
         <div class="col-md-6 col-12">
           <div class="process__img">
-            <img src="css/images/process/1.jpg" alt="">
+            <img src="css/images/process/1.jpg" alt="brief">
           </div>
         </div> 
       </div>
 
-      <div class="row no-gutters">
+      <div class="row no-gutters wow flipInX">
         <div class="col-md-6 col-12">
           <div class="process__img">
-            <img src="css/images/process/2.jpg" alt="">
+            <img src="css/images/process/2.jpg" alt="research">
           </div>
         </div>
         
@@ -445,7 +464,7 @@
         </div>
       </div>
 
-      <div class="row no-gutters">
+      <div class="row no-gutters wow flipInX">
         <div class="col-md-6 col-12">
           <div class="process__content d-flex justify-content-center align-items-center">
             <div class="process__content-text">Идея</div>
@@ -454,15 +473,15 @@
 
         <div class="col-md-6 col-12">
           <div class="process__img">
-            <img src="css/images/process/3.jpg" alt="">
+            <img src="css/images/process/3.jpg" alt="idea">
           </div>
         </div>
       </div>
 
-      <div class="row no-gutters">
+      <div class="row no-gutters wow flipInX">
         <div class="col-md-6 col-12">
           <div class="process__img">
-            <img src="css/images/process/4.jpg" alt="">
+            <img src="css/images/process/4.jpg" alt="end">
           </div>
         </div>
 
@@ -486,61 +505,61 @@
       <div class="row">
         <div class="col-12">
           <div class="range__slider">
-            <div class="range__slider-list flex-md-row align-items-md-start d-flex flex-column align-items-center">
+            <div class="range__slider-list flex-md-row align-items-md-start d-flex flex-column align-items-center" id="rangeList">
               <div class="range__slider-list__item">
-                <img src="css/images/companies/1.png" alt="">
+                <img src="css/images/companies/1.png" alt="company1">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/2.png" alt="">
+                <img src="css/images/companies/2.png" alt="company2">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/3.png" alt="">
+                <img src="css/images/companies/3.png" alt="company3">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/4.png" alt="">
+                <img src="css/images/companies/4.png" alt="company4">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/5.png" alt="">
+                <img src="css/images/companies/5.png" alt="company5">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/6.png" alt="">
+                <img src="css/images/companies/6.png" alt="company6">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/7.png" alt="">
+                <img src="css/images/companies/7.png" alt="company7">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/1.png" alt="">
+                <img src="css/images/companies/1.png" alt="company8">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/2.png" alt="">
+                <img src="css/images/companies/2.png" alt="company9">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/3.png" alt="">
+                <img src="css/images/companies/3.png" alt="company10">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/4.png" alt="">
+                <img src="css/images/companies/4.png" alt="company11">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/5.png" alt="">
+                <img src="css/images/companies/5.png" alt="company12">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/6.png" alt="">
+                <img src="css/images/companies/6.png" alt="company13">
               </div>
 
               <div class="range__slider-list__item">
-                <img src="css/images/companies/7.png" alt="">
+                <img src="css/images/companies/7.png" alt="company14">
               </div>
             </div>
           </div>
@@ -563,7 +582,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/1.png" alt="">
+              <img src="css/images/team/1.png" alt="Irina">
             </div>
 
             <div class="team__members-item__name text-center">Ирина Притыкина</div>
@@ -575,7 +594,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/2.png" alt="">
+              <img src="css/images/team/2.png" alt="Igor">
             </div>
 
             <div class="team__members-item__name text-center">Игорь Карий</div>
@@ -587,7 +606,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/3.png" alt="">
+              <img src="css/images/team/3.png" alt="Ilya">
             </div>
 
             <div class="team__members-item__name text-center">Илья Кондрашин</div>
@@ -599,7 +618,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/4.png" alt="">
+              <img src="css/images/team/4.png" alt="Margarita">
             </div>
 
             <div class="team__members-item__name text-center">Маргарита Гордеева</div>
@@ -611,7 +630,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/5.png" alt="">
+              <img src="css/images/team/5.png" alt="Svetlana">
             </div>
 
             <div class="team__members-item__name text-center">Светлана Коток</div>
@@ -624,7 +643,7 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div class="team__members-item d-flex flex-column align-items-center">
             <div class="team__members-item__img">
-              <img src="css/images/team/6.png" alt="">
+              <img src="css/images/team/6.png" alt="Maxim">
             </div>
 
             <div class="team__members-item__name text-center">Максим Ковальский</div>
@@ -642,55 +661,56 @@
 
               <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
               <div class="team__slider-item__name">Ислам Куаныш</div>
-              <div class="team__slider-item__post">Директор2</div>
+              <div class="team__slider-item__post">Директор</div>
             </div>
 
             <div class="team__slider-item d-flex flex-column align-items-center">
               <h3 class="team__slider-item__title">Ты - то, что ты делаешь!</h3>
 
-              <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
+              <div class="team__slider-item__text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nemo molestiae similique a doloremque deleniti illo enim maiores illum sapiente.</div>
               <div class="team__slider-item__name">Ислам Куаныш</div>
-              <div class="team__slider-item__post">Директор3</div>
+
+              <div class="team__slider-item__post">Директор</div>
             </div>
 
             <div class="team__slider-item d-flex flex-column align-items-center">
               <h3 class="team__slider-item__title">Ты - то, что ты делаешь!</h3>
 
-              <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
+              <div class="team__slider-item__text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente corrupti veritatis delectus vero? Voluptas odio esse saepe mollitia in repellendus omnis necessitatibus tempora architecto error, assumenda dolore, blanditiis magnam accusamus.</div>
 
               <div class="team__slider-item__name">Ислам Куаныш</div>
 
-              <div class="team__slider-item__post">Директор4</div>
+              <div class="team__slider-item__post">Директор</div>
             </div>
 
             <div class="team__slider-item d-flex flex-column align-items-center">
               <h3 class="team__slider-item__title">Ты - то, что ты делаешь!</h3>
 
-              <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
+              <div class="team__slider-item__text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga exercitationem est, vitae corrupti totam, cupiditate magnam repudiandae rerum, deserunt nulla officia ex libero. Blanditiis obcaecati, sint omnis doloribus veritatis rerum at ut maxime officiis corrupti cumque optio sunt. Ad, eum!</div>
 
               <div class="team__slider-item__name">Ислам Куаныш</div>
 
-              <div class="team__slider-item__post">Директор5</div>
+              <div class="team__slider-item__post">Директор</div>
             </div>
 
             <div class="team__slider-item d-flex flex-column align-items-center">
               <h3 class="team__slider-item__title">Ты - то, что ты делаешь!</h3>
 
-              <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
+              <div class="team__slider-item__text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, reprehenderit dolorem. Minus architecto, dolore amet atque, alias quam libero voluptate aperiam porro accusantium est culpa, ea provident corrupti ullam voluptas ab ipsum facere? In, et suscipit corrupti quod nesciunt rem amet aspernatur neque, officia maiores necessitatibus unde, rerum provident eos.</div>
 
               <div class="team__slider-item__name">Ислам Куаныш</div>
 
-              <div class="team__slider-item__post">Директор6</div>
+              <div class="team__slider-item__post">Директор</div>
             </div>
 
             <div class="team__slider-item d-flex flex-column align-items-center">
               <h3 class="team__slider-item__title">Ты - то, что ты делаешь!</h3>
 
-              <div class="team__slider-item__text text-center">То, что мы делаем, определяет то, кем мы являемся. Люди чувствуют старание и чувствуют неаккуратность. Это связано с уважением друг к другу, так что небрежность - это неуважение к самому себе.</div>
+              <div class="team__slider-item__text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem excepturi praesentium unde dignissimos, quas earum ullam eum perspiciatis temporibus dicta ratione dolores possimus expedita at soluta, autem perferendis quia. Rem beatae quos, sunt cupiditate cumque accusamus repellendus molestiae quisquam? Est, enim mollitia adipisci consectetur doloremque nostrum ipsum perspiciatis obcaecati beatae cumque officiis sint. Vitae cum ducimus accusantium quae tempora!</div>
 
               <div class="team__slider-item__name">Ислам Куаныш</div>
 
-              <div class="team__slider-item__post">Директор7</div>
+              <div class="team__slider-item__post">Директор</div>
             </div>
           </div>
         </div>
@@ -708,18 +728,19 @@
 
       <div class="row">
         <div class="col-md-6 col-12">
-          <div class="blog__content">
+          <div class="blog__content wow bounceInLeft">
             <div class="blog__content-img">
-              <img src="css/images/blog/1.jpg" alt="">
+              <img src="css/images/blog/1.jpg" alt="blog1">
             </div>
 
             <a href="#" class="blog__content-link text-center">Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров</a>
           </div>
         </div>
+
         <div class="col-md-6 col-12">
-          <div class="blog__content">
+          <div class="blog__content wow bounceInRight">
             <div class="blog__content-img">
-              <img src="css/images/blog/2.jpg" alt="">
+              <img src="css/images/blog/2.jpg" alt="blog2">
             </div>
 
             <a href="#" class="blog__content-link text-center">Прованс - это спокойный южный регион Франции, с великолепнейшей природой</a>
@@ -757,31 +778,31 @@
           <div
             class="contacts__links flex-md-column flex-md-nowrap justify-content-md-between d-flex flex-row flex-wrap align-items-start justify-content-start">
             <div class="contacts__links-item d-flex align-items-center">
-              <img src="css/images/contacts/phone.svg" alt="">
+              <img src="css/images/contacts/phone.svg" alt="phone">
 
               <a href="tel:+ 7 896 876 66 77">+ 7 896 876 66 77</a>
             </div>
 
             <div class="contacts__links-item d-flex align-items-center">
-              <img src="css/images/contacts/whatsapp.svg" alt="">
+              <img src="css/images/contacts/whatsapp.svg" alt="whatsapp">
             
               <a href="tel:+ 7 896 876 66 77">+ 7 896 876 66 77</a>
             </div>
             
             <div class="contacts__links-item d-flex align-items-center">
-              <img src="css/images/contacts/mail.svg" alt="">
+              <img src="css/images/contacts/mail.svg" alt="mail">
             
               <a href="mailto:sales@23degree.kz">sales@23degree.kz</a>
             </div>
 
             <div class="contacts__links-item d-flex align-items-center">
-              <img src="css/images/contacts/skype.svg" alt="">
+              <img src="css/images/contacts/skype.svg" alt="skype">
             
               <a href="#">skype: 23degree</a>
             </div>
 
             <div class="contacts__links-item d-flex align-items-center">
-              <img src="css/images/contacts/telegram.svg" alt="">
+              <img src="css/images/contacts/telegram.svg" alt="telegram">
             
               <a href="#">telegram: 23degree</a>
             </div>
@@ -832,11 +853,11 @@
             <div class="footer__social-text">Мы в социальных сетях:</div>
 
             <div class="footer__social-icons">
-              <img src="css/images/footer/facebook.svg" alt="">
+              <img src="css/images/footer/facebook.svg" alt="facebook">
 
-              <img src="css/images/footer/google-plus.svg" alt="">
+              <img src="css/images/footer/google-plus.svg" alt="google-plus">
 
-              <img src="css/images/footer/instagram.svg" alt="">
+              <img src="css/images/footer/instagram.svg" alt="instagram">
             </div>
           </div>
         </div>
@@ -851,7 +872,7 @@
           <div class="footer__maker d-flex align-items-end">
             <p>Создатель сайта -</p>
             
-            <img src="css/images/footer/maker.jpg" alt="">
+            <img src="css/images/footer/maker.jpg" alt="maker">
           </div>
         </div>
       </div>
@@ -860,6 +881,7 @@
   
   <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

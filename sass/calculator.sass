@@ -127,6 +127,11 @@
           .pack__point-text
             display: block
 
+        &:first-child
+          button 
+            background: $blue
+            border-color: $blue    
+
         &:not(:last-child)
           .button_calculator
             margin-right: 1.5rem
@@ -236,10 +241,13 @@
       border-right: 3rem solid #fff   
 
 @media (max-width: 576px)
+  .calculator__content-area__points
+    max-width: 36rem
+
   .calculator__content-area__point
     &:not(:last-child) 
       label
-        margin-right: 13.5rem    
+        margin-right: 9.5rem    
 
   .pack__point-text 
     width: 31rem
@@ -260,11 +268,6 @@
     margin-left: 2rem
 
 @media (max-width: 500px)
-  .calculator__content-area__point
-    &:not(:last-child) 
-      label
-        margin-right: 11.5rem              
-            
   .pack__point-text 
     width: 28rem
     left: 16rem
@@ -273,10 +276,18 @@
     margin-right: 4rem  
 
 @media (max-width: 450px)
+  .calculator__content-area__points
+    max-width: 24rem
+
   .calculator__content-area__point
     &:not(:last-child) 
       label
-        margin-right: 9.8rem     
+        margin-right: 5.5rem    
+
+    &.point_1,
+    &.point_4
+      p 
+        bottom: -3.5rem        
 
   .pack__point-text 
     display: none     
@@ -285,30 +296,7 @@
       display: none
 
 @media (max-width: 400px)
-  .calculator__content-area__point
-    &:not(:last-child) 
-      label
-        margin-right: 8rem  
-
-    p
-      left: -4rem   
-
-    &.point_4
-      p 
-        left: -5.6rem     
-
   .calculator__results-meters 
-    margin-left: 2rem   
-
-@media (max-width: 320px)
-  .calculator__content-area__point
-    &:not(:last-child) 
-      label
-        margin-right: 5.5rem 
-
-    &.point_1,
-    &.point_4
-      p 
-        bottom: -3.5rem     
+    margin-left: 2rem      
 
 
